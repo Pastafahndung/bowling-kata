@@ -1,15 +1,4 @@
-REPORT.
-*&---------------------------------------------------------------------*
-*& (c) Edwin Leippi Software-Entwicklung                               *
-*& Email : info@leippi.de                                              *
-*& Datum : 01.03.2008                                                  *
-*&                                                                     *
-*& Der Autor übernimmt keine Haftung für Schäden,                      *
-*& die durch den Einsatz dieses Programmes entstehen können            *
-*&---------------------------------------------------------------------*
-*& http://www.tricktresor.de
-*&---------------------------------------------------------------------*
-*REPORT  zz_alv_merge_cells.
+REPORT zz_bowling_results_display.
 
 " https://www.bvkaiserslautern.de/wissenswertes/bowling_zaehlweise.html
 " https://www.bowlinggenius.com/
@@ -18,11 +7,11 @@ REPORT.
 
 PARAMETERS clsgame  TYPE seoclsname DEFAULT 'ZCL_BOWLING_KATA_GAME'.
 PARAMETERS clsframe TYPE seoclsname DEFAULT 'ZCL_BOWLING_KATA_FRAME'.
+SELECTION-SCREEN COMMENT /1(70) text-001.
 
 
 INITIALIZATION.
 
-** Objekte instanzieren und zuordnen: Grid
   DATA(docker)   = NEW cl_gui_docking_container( side = cl_gui_docking_container=>dock_at_bottom ratio = 90 ).
   DATA(splitter) = NEW cl_gui_splitter_container( parent = docker rows = 2 columns = 1 ).
 
@@ -36,6 +25,7 @@ INITIALIZATION.
   DATA game TYPE REF TO zif_bowling_kata_game.
   DATA(scoreboard) = NEW zcl_bowling_kata_scoreboard( score_container ).
 
+  "set demo data
   text->set_textstream(
     '1,4' && cl_abap_char_utilities=>cr_lf &&
     `4,5` && cl_abap_char_utilities=>cr_lf &&

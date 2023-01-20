@@ -11,6 +11,12 @@
    </PROGDIR>
    <TPOOL>
     <item>
+     <ID>I</ID>
+     <KEY>001</KEY>
+     <ENTRY>Press ENTERto display game data</ENTRY>
+     <LENGTH>50</LENGTH>
+    </item>
+    <item>
      <ID>R</ID>
      <ENTRY>Bowling Kata: Display Results</ENTRY>
      <LENGTH>29</LENGTH>
