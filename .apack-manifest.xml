@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+ <asx:values>
+  <DATA>
+   <GROUP_ID>pastafahndung.de</GROUP_ID>
+   <ARTIFACT_ID>bowling-kata</ARTIFACT_ID>
+   <VERSION>0.1.1</VERSION>
+   <REPOSITORY_TYPE>abapGit</REPOSITORY_TYPE>
+   <GIT_URL>https://github.com/Pastafahndung/bowling-kata</GIT_URL>
+   <DEPENDENCIES>
+    <item>
+     <GROUP_ID>tricktresor.de</GROUP_ID>
+     <ARTIFACT_ID>alv-grid-merge-cells</ARTIFACT_ID>
+     <GIT_URL>https://github.com/tricktresor/alv-grid-merge-cells</GIT_URL>
+    </item>
+   </DEPENDENCIES>
+  </DATA>
+ </asx:values>
+</asx:abap>
